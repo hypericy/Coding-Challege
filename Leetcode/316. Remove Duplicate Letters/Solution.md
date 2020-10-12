@@ -1,11 +1,10 @@
 [link](https://leetcode.com/problems/remove-duplicate-letters/)  
+We have to find acending letter sequence as much as possible , so if there are more bigger letters in the back of the string we don't have to keep that bigger letter.  
 
 1.  First loop the string to count the occurence of each letter [O(n)]  
 2. loop again the given string
   if current letter is not used and is smaller than the previous letters `pre` we push bask in the string and there are more letter `pre` in the following letters in the string   then pop letter `pre` and push back current letter [O(n)]  
  
-Input: s = "cbacdcbc"  
-Output: "acdb"
 ```cpp
 class Solution {
 public:
