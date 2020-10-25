@@ -4,7 +4,7 @@ The idea is looping through the numbers from the beginning first and record the 
 Then loop from the back to find 3 and 2.  
 So we push every number which is bigger than the minimum number we stored previously to a stack.  
 Beacuse if nums[i] equals min[i] it means there is no bigger number in the front , it can't be selected as 3 or 2.  
-Then we pop up stack if the top of stack is smaller than current min,therefore it can be a candidate of 2.  
+Then we pop up stack if the top of stack is smaller than current min,therefore top of stack can be a candidate of 2.  
 If nums[i]>stack.top return true
 
   means 3 and 2
