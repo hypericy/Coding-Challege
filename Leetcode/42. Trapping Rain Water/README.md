@@ -25,3 +25,24 @@ public:
     }
 };
 ```
+# two pointer
+The idea is similar to DP, but this time we don't need to iterate the vector first. We use two pointer start from the leftmost and rightmost index.
+Each time we choose the lower bar between the two pointer to move forward and set its height as water level if it is higher than the previous level.  
+If it's not then we can trap water by the difference between previous level and this lower bar.   
+```cpp
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        //if(height.size()==0) return 0;
+        int l=0,r=height.size()-1,level=0;
+        int ans=0,low_bound;
+        while(l<r)
+        {
+            low_bound = height[l]<height[r]?height[l++]:height[r--];
+            level = max(level,low_bound);
+            ans+=level-low_bound;
+        }
+        return ans;   
+    }
+};
+```
