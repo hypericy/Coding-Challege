@@ -27,7 +27,7 @@ public:
 ```
 # two pointer
 The idea is similar to DP, but this time we don't need to iterate the vector first. We use two pointer start from the leftmost and rightmost index.
-Each time we choose the lower bar between the two pointer to move forward and set its height as water level if it is higher than the previous level.  
+Each time we choose the lower bar between the two pointer to move forward and set its height as water level if it is higher than the previous level.
 If it's not then we can trap water by the difference between previous level and this lower bar.   
 ```cpp
 class Solution {
