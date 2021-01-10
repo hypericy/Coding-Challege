@@ -1,5 +1,5 @@
 [link](https://leetcode.com/problems/create-sorted-array-through-instructions/)
-# Binary Search finding low Bound and up Bound
+# Binary Search finding low Bound and up Bound (TLE)
 ```cpp
 class Solution {
 public:
@@ -27,12 +27,10 @@ public:
         while(l<=r)
         {
             m=(l+r)/2;
-            if(sort[m]<num){
+            if(sort[m]<num)
                 l = m+1;
-            }
-            else{
-                r= m-1;
-            }
+            else
+               r= m-1;
         }
         lowBound = r+1;
         sort.insert(sort.begin()+upBound,num);
@@ -50,3 +48,4 @@ public:
     }
 };
 ```
+
